@@ -99,12 +99,14 @@ function startConfettiShower() {
 // --- NEW: 20 IMAGES CONFIGURATION ---
 // List of 20 images inside your img folder. Make sure your actual file names/extensions match perfectly!
 const popImages = [
-    'img/img1.jpg', 'img/img2.jpg', 'img/img3.jpg', 'img/img4.jpg', 'img/img5.jpg',
+    'img/img1.jpg', 'img/img2.jpg', 'img/img3.jpg', 'img/img4.jpg', 'img/img24.png',  'img/img5.jpg',
+    'img/img26.png', 
     'img/img6.jpg', 'img/img7.jpg', 'img/img8.jpg', 'img/img9.jpg', 'img/img10.jpg',
+    'img/img23.png', 'img/img25.png', 
     'img/img11.jpg', 'img/img12.jpg', 'img/img13.jpg', 'img/img14.jpg', 'img/img15.jpg',
     'img/img16.jpg', 'img/img17.jpg', 'img/img18.jpg', 'img/img19.jpg', 'img/img20.jpg'
-    'img/img21.jpg', 'img/img22.jpg',
-    'img/img23.png', 'img/img24.png', 'img/img25.png', 'img/img26.png', 'img/img27.png',
+    'img/img21.jpg',
+     'img/img27.png',
     'img/img28.png',
 ];
 
