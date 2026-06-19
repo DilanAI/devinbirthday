@@ -138,7 +138,7 @@ function showPopImage(x, y) {
     // Completely remove the element from code after 4 seconds
     setTimeout(() => {
         img.remove();
-    }, 3000);
+    }, 5000);
 }
 
 // 4. Full Canvas Balloon Game Engine
