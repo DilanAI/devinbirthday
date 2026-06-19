@@ -96,19 +96,23 @@ function startConfettiShower() {
     }, 50000);
 }
 
-// --- NEW: 20 IMAGES CONFIGURATION ---
-// List of 20 images inside your img folder. Make sure your actual file names/extensions match perfectly!
+// --- SEQUENTIAL IMAGES CONFIGURATION ---
 const popImages = [
+    
     'img/img1.jpg', 'img/img2.jpg', 'img/img3.jpg', 'img/img4.jpg', 'img/img24.png',  'img/img5.jpg',
     'img/img26.png', 
     'img/img6.jpg', 'img/img7.jpg', 'img/img8.jpg', 'img/img9.jpg', 'img/img10.jpg',
     'img/img23.png', 'img/img25.png', 
-    'img/img11.jpg', 'img/img12.jpg', 'img/img13.jpg', 'img/img14.jpg', 'img/img15.jpg',
-    'img/img16.jpg', 'img/img17.jpg', 'img/img18.jpg', 'img/img19.jpg', 'img/img20.jpg'
+    'img/img11.jpg', 'img/img12.jpg', 'img/img13.png', 'img/img14.jpg', 'img/img15.jpg',
+    'img/img16.jpg', 'img/img17.jpg', 'img/img18.jpg', 'img/img19.jpg', 'img/img20.jpg',
     'img/img21.jpg',
      'img/img27.png',
-    'img/img28.png',
+
+
 ];
+
+// Track the index globally to show them one by one
+let currentImageIndex = 0;
 
 function showPopImage(x, y) {
     const gameContainer = document.getElementById('game-container');
@@ -117,9 +121,9 @@ function showPopImage(x, y) {
     // Create image element
     const img = document.createElement('img');
     
-    // Pick a random image from our 20-image array
-    const randomImage = popImages[Math.floor(Math.random() * popImages.length)];
-    img.src = randomImage;
+    // Pick the next image in sequence
+    const sequentialImage = popImages[currentImageIndex];
+    img.src = sequentialImage;
     img.classList.add('pop-popup-image');
     
     // Position the image exactly where the balloon was clicked
@@ -128,7 +132,10 @@ function showPopImage(x, y) {
 
     gameContainer.appendChild(img);
 
-    // Completely remove the element from code after 3 seconds
+    // Increment index and loop back to 0 using remainder operator (%) when reaching the end
+    currentImageIndex = (currentImageIndex + 1) % popImages.length;
+
+    // Completely remove the element from code after 4 seconds
     setTimeout(() => {
         img.remove();
     }, 4000);
