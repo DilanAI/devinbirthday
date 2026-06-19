@@ -184,7 +184,7 @@ body {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 20; /* Places it over floating balloons */
     pointer-events: none; /* Prevents image clicks from blocking game inputs */
-    animation: popAndFade 4s ease-out forwards;
+    animation: popAndFade 7s ease-out forwards;
 }
 
 @keyframes popAndFade {
